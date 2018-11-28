@@ -26,11 +26,11 @@ public class MngrDBBean {
 		
 		try {
 			conn=getConnection();
-			pstmt=conn.prepareStatement("select managerPasswd from manager where managerId=?");
+			pstmt=conn.prepareStatement("select admin_pass from admin where admin_id=?");
 			pstmt.setString(1, id);
 			rs=pstmt.executeQuery();
 			if(rs.next()) {
-				String dbpass=rs.getString("managerPasswd");
+				String dbpass=rs.getString("admin_pass");
 				if(passwd.equals(dbpass)) {
 					x=1;
 				}else {
