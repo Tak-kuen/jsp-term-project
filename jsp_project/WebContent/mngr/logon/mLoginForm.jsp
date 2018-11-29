@@ -4,17 +4,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<<<<<<< HEAD
 <link rel="stylesheet" href="../css/NewFile.css" type="text/css" />
-=======
-<link rel="stylesheet" href="/jsp_project/css/style.css"/>
->>>>>>> branch 'master' of https://github.com/Tak-kuen/jsp-term-project.git
 <script src="/jsp_project/js/jquery-3.3.1.min.js"></script>
 <script src="/jsp_project/mngr/logon/mLogin.js"></script>
 <meta charset="UTF-8">
 <title>mLoginForm</title>
 </head>
-<body>
+<body> 
 	<c:if test="${empty sessionScope.id}">
 		<div class="status">
 			<ul>

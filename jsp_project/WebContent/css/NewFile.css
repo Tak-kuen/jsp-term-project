@@ -9,6 +9,7 @@ position: relative;
   padding: 45px;
   text-align: left;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  top: 250px;
 	
 }
 
@@ -18,7 +19,7 @@ position: relative;
   outline: 0;
   position: relative; 
   left: 200px;
-  bottom: 75px;
+  bottom: 65px;
   background: #c3c3c3;
   width: 90px;
   height: 60px;
@@ -32,5 +33,9 @@ position: relative;
 }
 
 #header{
-	background-image: url("/jsp_project/images/test.png");
+	background-color: gray;
+}
+
+li {
+	list-style:none;
 }
