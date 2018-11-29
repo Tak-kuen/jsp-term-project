@@ -4,13 +4,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="../css/NewFile.css" type="text/css" />
 <meta charset="UTF-8">
 <title>Jsp Project</title>
 </head>
 <body>
 <div id="header">
 	<div id="logo" class="box">
-		<img class="noborder" id="logo" src="/jsp_project/images/test.png"/>
+		<!-- <img class="noborder" id="logo" src="/jsp_project/images/test.png"/> -->
 	</div>
 	<div id="auth" class="box">
 		<c:if test="${type == 0}">

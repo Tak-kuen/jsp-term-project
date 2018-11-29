@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="../css/NewFile.css" type="text/css" />
 <script src="/jsp_project/js/jquery-3.3.1.min.js"></script>
 <script src="/jsp_project/mngr/logon/mLogin.js"></script>
 <meta charset="UTF-8">
@@ -11,10 +12,11 @@
 </head>
 <body>
 	<c:if test="${empty sessionScope.id}">
-		<div id="status">
+		<div class="status">
 			<ul>
-				<li>아이디<input id="id" name="id" type="email" size="20" maxlength="50">
-				비밀번호<input id="passwd" name="passwd" type="password" size="20" maxlength="16">
+			<h1>Log-in</h1>
+				<dl>ID <input id="id" name="id" type="email" size="20" maxlength="50"></dl>
+				<dl>PW <input id="passwd" name="passwd" type="password" size="20" maxlength="16"></dl>
 				<button id="login">로그인</button>
 			</ul>
 		</div>

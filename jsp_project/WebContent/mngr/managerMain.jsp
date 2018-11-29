@@ -11,7 +11,7 @@
 </head>
 <body>
 	<c:if test="${empty sessionScope.id }">
-		<div id="mList"><p>로그인하세요.</div>
+		<div id="mList"></div>
 	</c:if>
 	<c:if test="${not empty sessionScope.id }">
 		<div id="mList">
