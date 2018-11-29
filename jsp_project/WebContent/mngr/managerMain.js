@@ -5,6 +5,8 @@
 var status=true;
 
 $(document).ready(function() {
+	
+	
 	$("#registProduct").click(function() {
 		location.href="/jsp_project/mg/bookRegisterForm.do";
 	});

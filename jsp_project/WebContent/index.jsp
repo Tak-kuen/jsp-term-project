@@ -4,7 +4,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+<<<<<<< HEAD
 <link rel="stylesheet" href="../css/NewFile.css" type="text/css" />
+=======
+<link rel="stylesheet" href="/jsp_project/css/style.css"/>
+>>>>>>> branch 'master' of https://github.com/Tak-kuen/jsp-term-project.git
 <meta charset="UTF-8">
 <title>Jsp Project</title>
 </head>
@@ -18,7 +22,7 @@
 			<jsp:include page="mngr/logon/mLoginForm.jsp" />
 		</c:if>
 		<c:if test="${type == 1}">
-			<jsp:include page="member/loginForm.jsp"/>
+			<jsp:include page="member/loginForm.jsp" />
 		</c:if>
 	</div>
 </div>

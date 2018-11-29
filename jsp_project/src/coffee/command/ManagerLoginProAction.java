@@ -1,9 +1,10 @@
-package bookshop.command;
+package coffee.command;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-import bookshop.bean.MngrDBBean;
+import coffee.bean.MngrDBBean;
 
 public class ManagerLoginProAction implements CommandAction{
 
@@ -17,6 +18,8 @@ public class ManagerLoginProAction implements CommandAction{
 		MngrDBBean dbPro = MngrDBBean.getInstance();
 		int check = dbPro.userCheck(id,passwd);
 		
+		HttpSession session = request.getSession();
+		session.setAttribute("menus", dbPro.getMenuList());
 		request.setAttribute("check", new Integer(check));
 		request.setAttribute("id", id);
 		return "/mngr/logon/mLoginPro.jsp";

@@ -1,14 +1,14 @@
-package bookshop.command;
+package coffee.command;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class ManagerLogoutAction implements CommandAction {
+public class ManagerMainAction implements CommandAction{
 
 	@Override
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
-		// TODO Auto-generated method stub
-		return "/mngr/logon/mLogout.jsp";
+		request.setAttribute("type",new Integer(0));
+		return "/mngr/managerMain.jsp";
 	}
 	
 
