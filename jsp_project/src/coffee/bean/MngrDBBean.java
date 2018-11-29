@@ -1,6 +1,8 @@
-package bookshop.bean;
+package coffee.bean;
 
 import java.sql.*;
+import java.util.ArrayList;
+
 import javax.naming.*;
 import javax.sql.DataSource;
 
@@ -48,4 +50,34 @@ public class MngrDBBean {
 		}
 		return x;
 	}//userCheck
+	
+	public ArrayList<MenuBean> getMenuList() {
+		Connection conn=null;
+		PreparedStatement pstmt=null;
+		ResultSet rs=null;
+		ArrayList <MenuBean> menu;
+		MenuBean bean;
+		menu=new ArrayList<>();
+		try {
+			conn=getConnection();
+			pstmt=conn.prepareStatement("select * from menu");
+			rs=pstmt.executeQuery();
+			while(rs.next()) {
+				bean=new MenuBean();
+				bean.setMenu_code(rs.getString("menu_code"));
+				bean.setMenu_name(rs.getString("menu_name"));
+				bean.setMenu_price(rs.getInt("menu_price"));
+				bean.setMenu_desc(rs.getString("menu_desc"));
+				bean.setMenu_image(rs.getString("menu_image"));
+				menu.add(bean);
+			}
+		} catch(Exception ex) {
+			ex.printStackTrace();
+		}finally {
+			if(rs!=null) try {rs.close();} catch(SQLException ex) {}
+			if(pstmt!=null) try {rs.close();} catch(SQLException ex) {}
+			if(conn!=null) try {rs.close();} catch(SQLException ex) {}
+		}
+		return menu;
+	}
 }

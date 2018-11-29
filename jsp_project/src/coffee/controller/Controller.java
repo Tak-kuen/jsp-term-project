@@ -1,4 +1,4 @@
-package bookshop.controller;
+package coffee.controller;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import bookshop.command.CommandAction;
+import coffee.command.CommandAction;
 
 /**
  * Servlet implementation class Controller

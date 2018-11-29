@@ -1,15 +1,13 @@
-package bookshop.command;
+package coffee.command;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class ManagerMainAction implements CommandAction{
+public class MenuFormAction implements CommandAction {
 
 	@Override
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
-		request.setAttribute("type",new Integer(0));
-		return "/mngr/managerMain.jsp";
+		return "/mngr/menu/menuForm.jsp";
 	}
-	
 
 }
