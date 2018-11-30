@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="/jsp_project/css/style.css"/>
+<link rel="stylesheet" href="../css/NewFile.css" type="text/css" />
 <script src="/jsp_project/js/jquery-3.3.1.min.js"></script>
 <script src="/jsp_project/mngr/managerMain.js"></script>
 <title>managerMain.jsp</title>
@@ -20,12 +20,12 @@
 		<div id="mMain">
 			<div id="dropdownMenu">
 				<ul>
-					<li id="menu"><a href="cafe/menuHandling.do">메뉴관리</a>
-					<li id="mileage">적립금 관리
-					<li id="customer">고객관리
-					<li id="admin">직원관리
-					<li id="sales">매출관리
-					<li id="main">메인메뉴로
+					<dl><button id="menu"><a href="cafe/menuHandling.do">메뉴관리</a></button>
+					<dl><button id="mileage"><li>적립금</li><li>관리</li></button>
+					<dl><button id="customer">고객관리</button>
+					<dl><button id="admin">직원관리</button>
+					<dl><button id="sales">매출관리</button>
+					<dl><button id="main">메인메뉴</button>
 				</ul>
 			</div>
 			<div id="calc">
@@ -33,10 +33,10 @@
 				<div id="orderlist">
 					<c:forEach var="menu" items="${sessionScope.menus}">
 					<div class="menus">
-						<p>${menu.menu_name}<br/>
-						<p>${menu.menu_price}<br/>
-						<p>${menu.menu_desc}<br/>
-						<p>${menu.menu_image}<br/>
+						<li>${menu.menu_name}</li>
+						<li>${menu.menu_price}</li>
+						<li>${menu.menu_desc}</li>
+						<li>${menu.menu_image}</li>
 					</div><br/>
 					</c:forEach>
 				</div>
