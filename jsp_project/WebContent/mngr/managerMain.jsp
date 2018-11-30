@@ -12,11 +12,8 @@
 </head>
 <body>
 	<c:if test="${empty sessionScope.id }">
-<<<<<<< HEAD
 		<div id="mList"></div>
-=======
 		<div id="mMain"></div>
->>>>>>> branch 'master' of https://github.com/Tak-kuen/jsp-term-project.git
 	</c:if>
 	<c:if test="${not empty sessionScope.id }">
 		<div id="mMain">
