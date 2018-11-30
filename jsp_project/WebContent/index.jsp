@@ -3,8 +3,14 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
+<<<<<<< HEAD
 <head>
 <link rel="stylesheet" href="/jsp_project/css/NewFile.css"/>
+=======
+<head>
+
+<link rel="stylesheet" href="../css/NewFile.css" type="text/css" />
+>>>>>>> refs/remotes/origin/master
 <meta charset="UTF-8">
 <title>Jsp Project</title>
 </head>
