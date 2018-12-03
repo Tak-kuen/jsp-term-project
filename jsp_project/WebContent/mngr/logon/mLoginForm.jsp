@@ -3,8 +3,14 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
+<<<<<<< HEAD
 <head>
 <link rel="stylesheet" href="../css/NewFile.css" type="text/css" />
+<link rel="stylesheet" href="/jsp_project/css/style.css"/>
+=======
+<head>
+<link rel="stylesheet" href="../css/NewFile.css" type="text/css" />
+>>>>>>> refs/remotes/origin/master
 <script src="/jsp_project/js/jquery-3.3.1.min.js"></script>
 <script src="/jsp_project/mngr/logon/mLogin.js"></script>
 <meta charset="UTF-8">

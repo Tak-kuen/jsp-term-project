@@ -12,8 +12,12 @@
 </head>
 <body>
 	<c:if test="${empty sessionScope.id }">
+<<<<<<< HEAD
+		<div id="mList"></div>
+=======
 		<div id="mList"></div>
 
+>>>>>>> refs/remotes/origin/master
 		<div id="mMain"></div>
 	</c:if>
 	<c:if test="${not empty sessionScope.id }">
