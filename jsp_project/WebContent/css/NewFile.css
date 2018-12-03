@@ -10,7 +10,6 @@ position: relative;
   text-align: left;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   top: 250px;
-	
 }
 
 .status button {
@@ -72,9 +71,6 @@ li {
 	box-shadow:
 		2px 3px 1px rgba(000,000,000,0),
 		inset 0px 0px 1px rgba(255,255,255,0.6);
-	text-shadow:
-		0px -1px 0px rgba(000,000,000,1),
-		0px 1px 0px rgba(255,255,255,0.2);
 }
 #orderlist{
 	position: relative;
@@ -82,11 +78,12 @@ li {
 	width:600px;
 	height: 500px;
 	bottom:325px;
-	left:500px;
+	left:300px;
 	padding-top:20px;
 }
 .menus{
 	position: relative;
+	
 	border: 1px solid;
 	max-width:100px;
 	text-align: center;

@@ -3,14 +3,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
-<<<<<<< HEAD
 <head>
-<link rel="stylesheet" href="/jsp_project/css/NewFile.css"/>
-=======
 <head>
-
-<link rel="stylesheet" href="../css/NewFile.css" type="text/css" />
->>>>>>> refs/remotes/origin/master
+<script src="/jsp_project/js/jquery-3.3.1.min.js"></script>
+<script src="/jsp_project/js/index.js"></script>
+<link rel="stylesheet" href="/jsp_project/css/NewFile.css" type="text/css" />
+<link rel="stylesheet" href="/jsp_project/css/index.css" type="text/css" />
 <meta charset="UTF-8">
 <title>Jsp Project</title>
 </head>
@@ -27,6 +25,16 @@
 			<jsp:include page="member/loginForm.jsp" />
 		</c:if>
 	</div>
+</div>
+<div id="nav">
+	<ul>
+		<dl><button id="menu">메뉴관리</button>
+		<dl><button id="mileage">적립금<br>관리</button>
+		<dl><button id="customer">고객관리</button>
+		<dl><button id="admin">직원관리</button>
+		<dl><button id="sales">매출관리</button>
+		<dl><button id="main">메인메뉴</button>
+	</ul>
 </div>
 <div id="content" class="box2">
 	<jsp:include page="${cont}"/>

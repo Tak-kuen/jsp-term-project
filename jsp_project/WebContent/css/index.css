@@ -1,0 +1,19 @@
+@charset "UTF-8";
+#header {
+	position:fixed;
+	left:0; top:0; right:0;
+	height:100px;
+	border-radius: 0px;
+	border: 1px solid #000000;
+	
+}
+#nav {
+	position:fixed;
+	left:0;top:100px;bottom:0;
+	width:100px;
+	border: 1px solid #000000;
+}
+#content{
+	margin-top:100px;
+	margin-left:100px;
+}
