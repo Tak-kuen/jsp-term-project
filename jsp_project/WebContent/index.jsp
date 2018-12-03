@@ -7,26 +7,19 @@
 <head>
 <script src="/jsp_project/js/jquery-3.3.1.min.js"></script>
 <script src="/jsp_project/js/index.js"></script>
-<link rel="stylesheet" href="/jsp_project/css/NewFile.css" type="text/css" />
 <link rel="stylesheet" href="/jsp_project/css/index.css" type="text/css" />
 <meta charset="UTF-8">
 <title>Jsp Project</title>
 </head>
 <body>
 <div id="header">
+	<h1 id="title">송남 CAFE</h1>
 	<div id="logo" class="box">
 		<!-- <img class="noborder" id="logo" src="/jsp_project/images/test.png"/> -->
 	</div>
-	<div id="auth" class="box">
-		<c:if test="${type == 0}">
-			<jsp:include page="mngr/logon/mLoginForm.jsp" />
-		</c:if>
-		<c:if test="${type == 1}">
-			<jsp:include page="member/loginForm.jsp" />
-		</c:if>
-	</div>
 </div>
 <div id="nav">
+	<c:if test="${not empty sessionScope.id}">
 	<ul>
 		<dl><button id="menu">메뉴관리</button>
 		<dl><button id="mileage">적립금<br>관리</button>
@@ -35,6 +28,15 @@
 		<dl><button id="sales">매출관리</button>
 		<dl><button id="main">메인메뉴</button>
 	</ul>
+	</c:if>
+</div>
+<div id="auth" class="box">
+	<c:if test="${type == 0}">
+		<jsp:include page="mngr/logon/mLoginForm.jsp" />
+	</c:if>
+	<c:if test="${type == 1}">
+		<jsp:include page="member/loginForm.jsp" />
+	</c:if>
 </div>
 <div id="content" class="box2">
 	<jsp:include page="${cont}"/>

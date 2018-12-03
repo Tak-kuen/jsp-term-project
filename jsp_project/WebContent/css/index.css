@@ -1,4 +1,18 @@
 @charset "UTF-8";
+body{
+	background-color: #D1C2B1;
+}
+
+/* 카페 타이틀 */
+body #title{
+	position:absolute;
+	text-align: center;
+	margin-top:0;
+	left:45%;
+	color: #5a311a;
+	font-size: 45px;
+	font-family: fantasy;
+}
 #header {
 	position:fixed;
 	left:0; top:0; right:0;
@@ -11,9 +25,9 @@
 	position:fixed;
 	left:0;top:100px;bottom:0;
 	width:100px;
-	border: 1px solid #000000;
 }
 #content{
-	margin-top:100px;
-	margin-left:100px;
+	position:absolute;
+	margin-top:150px;
+	margin-left:150px;
 }

@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+/* 주문리스트 박스 */
+#orderlist{
+	position: fixed;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+	width:600px;
+	height: 500px;
+	top:200px;
+	left:200px;
+	padding-top:20px;
+	background-color: white;
+}
+
+/* 주문리스트 박스 안  메뉴박스 */
+.menus{
+	position: relative;
+	border: 1px solid;
+	max-width:100px;
+	text-align: center;
+}
+#paymentlist {
+	position:fixed;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+	width:300px;
+	height: 500px;
+	top:200px;
+	left:850px;
+	padding-top:20px;
+	background-color: white;
+	
+}
+
