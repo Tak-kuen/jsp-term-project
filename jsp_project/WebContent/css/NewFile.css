@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+/* 로그인 박스 */
 .status{
 position: relative;
   z-index: 1;
@@ -9,17 +10,18 @@ position: relative;
   padding: 45px;
   text-align: left;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-  top: 250px;
+  top: 240px;
 	
 }
 
+/* 로그인 버튼 */
 .status button {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
   position: relative; 
-  left: 210px;
-  bottom: 75px;
+  left: 220px;
+  bottom: 80px;
   background: #c3c3c3;
   width: 90px;
   height: 62px;
@@ -33,14 +35,35 @@ position: relative;
   cursor: pointer;
 }
 
+/* 배경색 */
 body{
 	background-color: #D1C2B1;
 }
 
+/* 카페 타이틀 */
+body h1#title{
+	position: relative;
+	margin: auto;
+	text-align: center;
+	top: 50px;
+	color: #5a311a;
+	font-size: 50px;
+	font-family: fantasy;
+}
+
+/* 로그인 후 로그아웃 버튼쪽 */
+body ul#successlogin{
+	position: relative;
+	margin: auto;
+	text-align: right;
+}
+
+/* li */
 li {
 	list-style:none;
 }
 
+/* 메뉴버튼 */
 #dropdownMenu button{
 	position:relative;
 	top: 195px;
@@ -49,16 +72,16 @@ li {
 	height:70px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
-	color: black;
+	color: white;
 	padding: 10px 29px;
 	background: -moz-linear-gradient(
 		top,
-		#ffffff 0%,
-		#ffffff);
+		#956245 0%,
+		#956245);
 	background: -webkit-gradient(
 		linear, left top, left bottom,
-		from(#ffffff),
-		to(#ffffff));
+		from(#956245),
+		to(#956245));
 	-moz-border-radius: 11px;
 	-webkit-border-radius: 11px;
 	border-radius: 0px;
@@ -76,6 +99,8 @@ li {
 		0px -1px 0px rgba(000,000,000,1),
 		0px 1px 0px rgba(255,255,255,0.2);
 }
+
+/* 주문리스트 박스 */
 #orderlist{
 	position: relative;
 	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
@@ -84,7 +109,10 @@ li {
 	bottom:325px;
 	left:500px;
 	padding-top:20px;
+	background-color: white;
 }
+
+/* 주문리스트 박스 안  메뉴박스 */
 .menus{
 	position: relative;
 	border: 1px solid;

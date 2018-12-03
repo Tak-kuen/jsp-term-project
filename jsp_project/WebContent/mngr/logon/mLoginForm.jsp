@@ -11,6 +11,7 @@
 <title>mLoginForm</title>
 </head>
 <body> 
+<h1 id="title">송남 CAFE</h1>
 	<c:if test="${empty sessionScope.id}">
 		<div class="status">
 			<ul>
@@ -23,7 +24,7 @@
 	</c:if>
 	<c:if test="${not empty sessionScope.id }">
 		<div id="status">
-			<ul>
+			<ul id="successlogin">
 				<li>관리자 로그인 성공!!.. 작업중
 				<button id="logout">로그아웃</button>
 			</ul>
