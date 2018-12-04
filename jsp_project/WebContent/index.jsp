@@ -13,7 +13,7 @@
 </head>
 <body>
 <div id="header">
-	<h1 id="title">송남 CAFE</h1>
+	<h1 id="title">CAFE</h1>
 	<div id="logo" class="box">
 		<!-- <img class="noborder" id="logo" src="/jsp_project/images/test.png"/> -->
 	</div>

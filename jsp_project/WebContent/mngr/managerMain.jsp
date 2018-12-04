@@ -27,7 +27,7 @@
 					</c:forEach>
 				</div>
 				<div id="paymentlist" class="box">
-					<p>ㅇ
+					<div class="lists"></div>
 				</div>
 			</div>
 		</div>
