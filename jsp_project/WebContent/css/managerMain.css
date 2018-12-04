@@ -4,10 +4,10 @@
 #orderlist{
 	position: fixed;
 	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-	width:600px;
+	width:500px;
 	height: 500px;
 	top:200px;
-	left:500px;
+	left:200px;
 	padding-top:20px;
 	background-color: white;
 }
@@ -27,7 +27,7 @@
 	width:300px;
 	height: 500px;
 	top:200px;
-	left:1150px;
+	left:715px;
 	padding-top:20px;
 	background-color: white;
 	
