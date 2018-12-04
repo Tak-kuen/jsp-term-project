@@ -15,16 +15,42 @@
 	<c:if test="${not empty sessionScope.id }">
 		<div id="mMain">
 			<div id="calc">
-				<div id="orderctgr"></div>
+				<div id="orderctgr">
+				<div class="category">
+				<ul>
+					<li><span id="coffee" class="menuLink" href="">Coffee</span></li>
+					<li><span id="ade" class="menuLink" href="">Ade</span></li>
+					<li><span id="ice" class="menuLink" href="">Icecream</span></li>
+				</ul>
+				</div>
+				</div>
 				<div id="orderlist" class="box">
 					<c:forEach var="menu" items="${sessionScope.menus}">
-					<div class="menus">
-						<div class="items">${menu.menu_name}</div>
-						<div class="items">${menu.menu_price}</div>
-						<div class="items">${menu.menu_desc}</div>
-						<div class="items">${menu.menu_image}</div>
-					</div>
-					</c:forEach>
+		<c:if test="${menu.menu_ctgr == 1}">
+		<div class="coffee">
+			<div class="items">${menu.menu_name}</div>
+			<div class="items">${menu.menu_price}</div>
+			<div class="items">${menu.menu_desc}</div>
+			<div class="items">${menu.menu_image}</div>
+		</div>
+		</c:if>
+		<c:if test="${menu.menu_ctgr == 2}">
+		<div class="ade">
+			<div class="items">${menu.menu_name}</div>
+			<div class="items">${menu.menu_price}</div>
+			<div class="items">${menu.menu_desc}</div>
+			<div class="items">${menu.menu_image}</div>
+		</div>
+		</c:if>
+		<c:if test="${menu.menu_ctgr == 3}">
+		<div class="ice">
+			<div class="items">${menu.menu_name}</div>
+			<div class="items">${menu.menu_price}</div>
+			<div class="items">${menu.menu_desc}</div>
+			<div class="items">${menu.menu_image}</div>
+		</div>
+		</c:if>
+	</c:forEach>	
 				</div>
 				<div id="paymentlist" class="box">
 					<div class="lists"></div>

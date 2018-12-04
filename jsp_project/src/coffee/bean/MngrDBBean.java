@@ -64,6 +64,7 @@ public class MngrDBBean {
 			rs=pstmt.executeQuery();
 			while(rs.next()) {
 				bean=new MenuBean();
+				bean.setMenu_ctgr(rs.getInt("menu_ctgr"));
 				bean.setMenu_code(rs.getString("menu_code"));
 				bean.setMenu_name(rs.getString("menu_name"));
 				bean.setMenu_price(rs.getInt("menu_price"));

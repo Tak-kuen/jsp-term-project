@@ -57,3 +57,31 @@ body #title{
 	margin-top:150px;
 	margin-left:150px;
 }
+.category{
+	height:50px;
+	width:540px;
+}
+
+.category ul li {
+	list-style:none;
+	color:white;
+	background-color:#2d2d2d;
+	float:left;
+	line-height:30px;
+	vertical-align:middle;
+	text-align:center;
+}
+
+.category .menuLink {
+	color:white;
+	display:block;
+	width:166.5px;
+	font-size:12px;
+	font-weight:bold;
+	font-family:"Trebuchet MS", Dotum,Arial;
+}
+
+.category .menuLink:hover{
+	color:red;
+	background-color:#4d4d4d;
+}
