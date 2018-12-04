@@ -42,6 +42,7 @@ body #title{
 	margin:0px;
 	transition-duration: 0.3s;
 	text-align: center;
+	outline:none;
 }
 #nav button:hover{
 	border-bottom: 4px solid #ffffff;
