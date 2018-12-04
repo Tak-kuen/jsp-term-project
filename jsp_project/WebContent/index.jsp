@@ -20,13 +20,13 @@
 </div>
 <div id="nav">
 	<c:if test="${not empty sessionScope.id}">
-	<ul>
-		<dl><button id="menu">메뉴관리</button>
+	<ul id="menusection">
+		<dl><button id="menu">메뉴<br>관리</button>
 		<dl><button id="mileage">적립금<br>관리</button>
-		<dl><button id="customer">고객관리</button>
-		<dl><button id="admin">직원관리</button>
-		<dl><button id="sales">매출관리</button>
-		<dl><button id="main">메인메뉴</button>
+		<dl><button id="customer">고객<br>관리</button>
+		<dl><button id="admin">직원<br>관리</button>
+		<dl><button id="sales">매출<br>관리</button>
+		<dl><button id="main">메인<br>메뉴</button>
 	</ul>
 	</c:if>
 </div>
