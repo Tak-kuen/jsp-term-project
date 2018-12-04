@@ -16,8 +16,11 @@
 .menus{
 	position: relative;
 	border: 1px solid;
-	max-width:100px;
 	text-align: center;
+	margin:1%;
+	width:18%;
+	height:18%;
+	float:left;
 }
 #paymentlist {
 	position:fixed;
@@ -28,6 +31,8 @@
 	left:850px;
 	padding-top:20px;
 	background-color: white;
+}
+.items {
 	
 }
 
