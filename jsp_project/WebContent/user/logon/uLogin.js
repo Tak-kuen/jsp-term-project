@@ -23,7 +23,7 @@ $(document).ready(function() {
 			type:"post",
 			url:"/jsp_project/us/userLogout.do",
 			success:function(data) {
-				location.href="/jsp_project/us/user.do";
+				location.href="/jsp_project/us/userMain.do";
 			}
 		});
 	});

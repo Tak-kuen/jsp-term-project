@@ -51,6 +51,35 @@ public class MngrDBBean {
 		return x;
 	}//userCheck
 	
+	public CustomerBean numCheck(String num) {
+		Connection conn=null;
+		PreparedStatement pstmt=null;
+		ResultSet rs=null;
+		int x=-1;
+		CustomerBean Csbean=null;
+		
+		try {
+			conn=getConnection();
+			pstmt=conn.prepareStatement("select * from customer where cus_num=?");
+			pstmt.setString(1, num);
+			rs=pstmt.executeQuery();
+			if(rs.next()) {
+				Csbean=new CustomerBean();
+				Csbean.setCus_name(rs.getString("cus_name"));
+				Csbean.setCus_mile(rs.getInt("cus_mile"));
+			}else {
+			}//rs.next
+			
+		} catch(Exception ex) {
+			ex.printStackTrace();
+		}finally {
+			if(rs!=null) try {rs.close();} catch(SQLException ex) {}
+			if(pstmt!=null) try {rs.close();} catch(SQLException ex) {}
+			if(conn!=null) try {rs.close();} catch(SQLException ex) {}
+		}
+		return Csbean;
+	}
+	
 	public int cusCheck(String num, String name) {
 		Connection conn=null;
 		PreparedStatement pstmt=null;

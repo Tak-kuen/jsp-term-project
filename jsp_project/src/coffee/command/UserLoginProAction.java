@@ -3,7 +3,7 @@ package coffee.command;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
+import coffee.bean.CustomerBean;
 import coffee.bean.MngrDBBean;
 
 public class UserLoginProAction implements CommandAction{
@@ -18,6 +18,8 @@ public class UserLoginProAction implements CommandAction{
 		MngrDBBean dbPro = MngrDBBean.getInstance();
 		int check = dbPro.cusCheck(num,name);
 		
+		CustomerBean customer=dbPro.numCheck(num);
+		request.getSession().setAttribute("customer", customer);
 		request.setAttribute("check", new Integer(check));
 		request.setAttribute("num", num);
 		return "/user/logon/uLoginPro.jsp";
