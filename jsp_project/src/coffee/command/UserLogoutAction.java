@@ -3,12 +3,12 @@ package coffee.command;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class UserMainAction implements CommandAction{
+public class UserLogoutAction implements CommandAction{
 
 	@Override
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
-		request.setAttribute("type",new Integer(1));
-		return "/user/userMain.jsp";
+		// TODO Auto-generated method stub
+		return "/user/logon/uLogout.jsp";
 	}
 
 }

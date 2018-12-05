@@ -34,6 +34,9 @@
 	<c:if test="${type == 0}">
 		<jsp:include page="mngr/logon/mLoginForm.jsp" />
 	</c:if>
+	<c:if test="${type == 1 }">
+		<jsp:include page="user/logon/uLoginForm.jsp"/>
+	</c:if>
 </div>
 <div id="content" class="box2">
 	<jsp:include page="${cont}"/>
