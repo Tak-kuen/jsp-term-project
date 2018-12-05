@@ -44,16 +44,20 @@
 	<div id="menuEdit">
 		<div id="menuName">
 			<span class="menuLeft">메뉴명</span>
+			<input type="text" id="nameText" name="nameText" maxlength="15" size="10" value=""/>
+			<span  class="menuRight"></span>
 		</div>
 		<div id="menuPrice">
-			<span class="menuLeft">가격</span><span class="menuRight"></span>
+			<span class="menuLeft">가격</span>
+			<input type="text" id="priceText" name="priceText" maxlength="10" size="10" value=""/>
+			<span class="menuRight"></span>
 		</div>
 		<div id="menuDesc">
 			<span class="menuLeft">이미지</span><span class="menuRight"></span>
 		</div>
 		<div id="menuImage">
-			<span class="menuLeft"></span><span class="menuRight"></span>
+			<span class="menuLeft"></span><div class="menuRight"></div>
 		</div>
 	</div>
 </div>
-<script src="/jsp_project/js/index.js"></script>
+<script src="/jsp_project/js/menuForm.js"></script>

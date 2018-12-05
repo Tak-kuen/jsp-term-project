@@ -23,10 +23,18 @@ $(document).ready(function() {
 	
 	coffee.click(function() {
 		var tg=$(this);
-		var img=tg.find('> .items:eq(0)');
+		var img=tg.find('> .items:eq(0) > img');
 		var name=tg.find('> .items:eq(1)');
 		var price=tg.find('> .items:eq(2)');
-		$('#').append('<span class="menuRight"></span>');
+		console.log(img.attr("src"));
+		console.log(name.text());
+		console.log(price.text());
+		$('#menuName > .menuRight').text(name.text());
+		$('#nameText').val(name.text());
+		$('#menuPrice > .menuRight').text(price.text());
+		$('#priceText').val(price.text());
+		$('#menuImage > .menuRight').empty();
+		$('#menuImage > .menuRight').append('<img src="' +img.attr("src") + '"/>');
 	});
 	ade.click(function() {
 		var tg=$(this);
