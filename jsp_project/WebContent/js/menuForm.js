@@ -17,6 +17,7 @@ $(document).ready(function() {
 		$(".ade").hide();
 		$(".ice").show();
 	});
+	
 	var coffee=$('.coffee');
 	var ade=$('.ade');
 	var ice=$('.ice');
@@ -50,5 +51,23 @@ $(document).ready(function() {
 		$('#priceText').val(price.text());
 		$('#menuImage > .menuRight').empty();
 		$('#menuImage > .menuRight').append('<img src="' +img.attr("src") + '"/>');
+	});
+	$("#upPro1").click(function() {
+		var updated = confirm("수정하시겠습니까?");
+		if(updated==true) {
+			$('#upForm1').ajaxForm({
+				success:function(data,status) {
+					$("#upResult").html(data);
+				}
+			});
+		}
+	});
+	$('#cancel').click(function() {
+		var canceled=confirm("취소하시겠습니까?");
+		if(canceled==true) {
+			$('#nameText').val("");
+			$('#priceText').val("");
+			$('#menuImage > .menuRight').empty();
+		}
 	});
 });

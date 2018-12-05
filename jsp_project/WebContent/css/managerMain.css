@@ -34,4 +34,19 @@
 	padding-top:20px;
 	background-color: white;
 }
-
+.paylists {
+	height:60%;
+	border:1px solid black;
+}
+.payresult{
+	height:20%;
+	border:1px solid black;
+}
+.userMile{
+	height:15%;
+	border:1px solid black;
+}
+.order{
+	display:inline-block;
+	margin-right:20px;
+}

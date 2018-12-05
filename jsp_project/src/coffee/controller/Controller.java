@@ -104,7 +104,8 @@ public class Controller extends HttpServlet {
 				command=command.substring(request.getContextPath().length());
 			}
 			com=(CommandAction)commandMap.get(command);
-			if(com!=null) {view=com.requestPro(request, response);}
+			if(com==null) {view="";}
+			else {view=com.requestPro(request, response);}
 		}catch(Throwable e) {
 			throw new ServletException(e);
 		}

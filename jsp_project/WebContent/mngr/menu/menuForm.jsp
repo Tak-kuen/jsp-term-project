@@ -2,12 +2,12 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <link rel="stylesheet" href="/jsp_project/css/menuForm.css" type="text/css" />
-<script src="../js/jquery-form.min.js"></script>
+<script src="/jsp_project/js/jquery-form.min.js"></script>
 <div class="category">
 	<ul>
-		<li><span id="coffee" class="menuLink" href="">Coffee</span></li>
-		<li><span id="ade" class="menuLink" href="">Ade</span></li>
-		<li><span id="ice" class="menuLink" href="">Icecream</span></li>
+		<li><span id="coffee" class="menuLink">Coffee</span></li>
+		<li><span id="ade" class="menuLink" >Ade</span></li>
+		<li><span id="ice" class="menuLink" >Icecream</span></li>
 	</ul>
 </div>
 <div id="menuList">
@@ -58,12 +58,15 @@
 		</div>
 	</div>
 	
-	<form id="upForm1" action="singleUploadPro.jsp" method="post"
+	<form id="upForm1" action="/jsp_project/mg/cafe/imageUpload.do" method="post"
 			enctype="multipart/form-data">
 	<div id="form">
 		<div class="imgUpdate">
 			파일선택<input type="file" id="file1" name="file1">
-		<input type="submit" id="upPro1" value="단일 파일 업로드">
+		</div>
+		<div class="imgUpdate">
+			<input type="submit" id="upPro1" value="수정"/>
+			<button id="cancel">취소</button>
 		</div>
 	</div>
 	</form>
