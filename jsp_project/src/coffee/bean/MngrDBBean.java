@@ -28,13 +28,17 @@ public class MngrDBBean {
 		
 		try {
 			conn=getConnection();
-			pstmt=conn.prepareStatement("select admin_pass from admin where admin_id=?");
+			pstmt=conn.prepareStatement("select admin_pass,admin_class from admin where admin_id=?");
 			pstmt.setString(1, id);
 			rs=pstmt.executeQuery();
 			if(rs.next()) {
 				String dbpass=rs.getString("admin_pass");
 				if(passwd.equals(dbpass)) {
-					x=1;
+					if(rs.getInt("admin_class")==1) {
+						x=2;
+					}else {
+						x=1;
+					}
 				}else {
 					x=0;
 				}
@@ -45,8 +49,8 @@ public class MngrDBBean {
 			ex.printStackTrace();
 		}finally {
 			if(rs!=null) try {rs.close();} catch(SQLException ex) {}
-			if(pstmt!=null) try {rs.close();} catch(SQLException ex) {}
-			if(conn!=null) try {rs.close();} catch(SQLException ex) {}
+			if(pstmt!=null) try {pstmt.close();} catch(SQLException ex) {}
+			if(conn!=null) try {conn.close();} catch(SQLException ex) {}
 		}
 		return x;
 	}//userCheck
@@ -76,8 +80,8 @@ public class MngrDBBean {
 			ex.printStackTrace();
 		}finally {
 			if(rs!=null) try {rs.close();} catch(SQLException ex) {}
-			if(pstmt!=null) try {rs.close();} catch(SQLException ex) {}
-			if(conn!=null) try {rs.close();} catch(SQLException ex) {}
+			if(pstmt!=null) try {pstmt.close();} catch(SQLException ex) {}
+			if(conn!=null) try {conn.close();} catch(SQLException ex) {}
 		}
 		return x;
 	}
@@ -107,9 +111,25 @@ public class MngrDBBean {
 			ex.printStackTrace();
 		}finally {
 			if(rs!=null) try {rs.close();} catch(SQLException ex) {}
-			if(pstmt!=null) try {rs.close();} catch(SQLException ex) {}
-			if(conn!=null) try {rs.close();} catch(SQLException ex) {}
+			if(pstmt!=null) try {pstmt.close();} catch(SQLException ex) {}
+			if(conn!=null) try {conn.close();} catch(SQLException ex) {}
 		}
 		return menu;
+	}
+	public void updateMenuimg(String filename, String menu_name) {
+		Connection conn=null;
+		PreparedStatement pstmt=null;
+		try {
+			conn=getConnection();
+			pstmt=conn.prepareStatement("update menu set menu_image=?  where menu_name=?");
+			pstmt.setString(1, "/"+filename);
+			pstmt.setString(2, menu_name);
+			pstmt.executeUpdate();
+		} catch(Exception ex) {
+			ex.printStackTrace();
+		}finally {
+			if(pstmt!=null) try {pstmt.close();} catch(SQLException ex) {}
+			if(conn!=null) try {conn.close();} catch(SQLException ex) {}
+		}
 	}
 }

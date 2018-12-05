@@ -19,9 +19,9 @@
 				<div id="orderctgr">
 					<div class="category">
 						<ul>
-							<li><span id="coffee" class="menuLink" href="">Coffee</span></li>
-							<li><span id="ade" class="menuLink" href="">Ade</span></li>
-							<li><span id="ice" class="menuLink" href="">Icecream</span></li>
+							<li><span id="coffee" class="menuLink" >Coffee</span></li>
+							<li><span id="ade" class="menuLink">Ade</span></li>
+							<li><span id="ice" class="menuLink">Icecream</span></li>
 						</ul>
 					</div>
 				</div>
@@ -60,8 +60,17 @@
 					</c:forEach>
 				</div>
 				<div id="paymentlist" class="box">
+					<button id="orderReset">주문취소</button>
 					<div class="paylists"></div>
-					<div class="payresult"></div>
+					<div class="userMile">
+						전화번호<input type="text" id="userName" size="15">
+						<button id="mileselect">조회</button><br/>
+						적립금<span id="mileageMoney"></span>
+					</div>
+					<div class="payresult">
+						결제금액
+					</div>
+						
 				</div>
 			</div>
 		</div>
