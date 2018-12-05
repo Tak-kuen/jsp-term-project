@@ -3,6 +3,7 @@ body{
 	background-color: #D1C2B1;
 }
 
+
 /* 카페 타이틀 */
 body #title{
 	position:absolute;
@@ -85,4 +86,8 @@ body #title{
 .category .menuLink:hover{
 	color:red;
 	background-color:#4d4d4d;
+}
+img {
+	width:100px;
+	height:100px;
 }
