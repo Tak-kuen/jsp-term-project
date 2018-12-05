@@ -23,23 +23,32 @@ $(document).ready(function() {
 	
 	coffee.click(function() {
 		var tg=$(this);
-		var img=tg.find('> .items:eq(0)');
+		var img=tg.find('> .items:eq(0) > img');
 		var name=tg.find('> .items:eq(1)');
 		var price=tg.find('> .items:eq(2)');
-		$('#').append('<span class="menuRight"></span>');
+		$('#nameText').val(name.text());
+		$('#priceText').val(price.text());
+		$('#menuImage > .menuRight').empty();
+		$('#menuImage > .menuRight').append('<img src="' +img.attr("src") + '"/>');
 	});
 	ade.click(function() {
 		var tg=$(this);
-		var img=tg.find('> .items:eq(0)');
+		var img=tg.find('> .items:eq(0) > img');
 		var name=tg.find('> .items:eq(1)');
 		var price=tg.find('> .items:eq(2)');
-		$('.paylists').append('<div class="name">'+name.text()+"&nbsp;&nbsp;" +price.text()+'</div>');
+		$('#nameText').val(name.text());
+		$('#priceText').val(price.text());
+		$('#menuImage > .menuRight').empty();
+		$('#menuImage > .menuRight').append('<img src="' +img.attr("src") + '"/>');
 	});
 	ice.click(function() {
 		var tg=$(this);
-		var img=tg.find('> .items:eq(0)');
+		var img=tg.find('> .items:eq(0) > img');
 		var name=tg.find('> .items:eq(1)');
 		var price=tg.find('> .items:eq(2)');
-		$('.paylists').append('<div class="name">'+name.text()+"&nbsp;&nbsp;" +price.text()+'</div>');
+		$('#nameText').val(name.text());
+		$('#priceText').val(price.text());
+		$('#menuImage > .menuRight').empty();
+		$('#menuImage > .menuRight').append('<img src="' +img.attr("src") + '"/>');
 	});
 });
