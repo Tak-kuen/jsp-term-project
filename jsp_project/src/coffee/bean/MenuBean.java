@@ -4,7 +4,6 @@ public class MenuBean {
 	private String menu_code;
 	private String menu_name;
 	private int menu_price;
-	private String menu_desc;
 	private String menu_image;
 	private int menu_ctgr;
 	
@@ -19,10 +18,7 @@ public class MenuBean {
 	
 	public int getMenu_price() {return menu_price;}
 	public void setMenu_price(int menu_price) {this.menu_price = menu_price;}
-	
-	public String getMenu_desc() {return menu_desc;}
-	public void setMenu_desc(String menu_desc) {this.menu_desc = menu_desc;}
-	
+		
 	public String getMenu_image() {return menu_image;}
 	public void setMenu_image(String menu_image) {this.menu_image = menu_image;}
 }

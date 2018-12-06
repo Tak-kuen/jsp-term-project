@@ -2,6 +2,7 @@ package coffee.bean;
 
 import java.sql.*;
 import java.util.ArrayList;
+import org.json.*;
 
 import javax.naming.*;
 import javax.sql.DataSource;
@@ -11,6 +12,8 @@ public class MngrDBBean {
 	private static MngrDBBean instance = new MngrDBBean();
 	public static MngrDBBean getInstance()	{return instance;}
 	private MngrDBBean() {}
+	JSONObject jsonObject;
+	JSONArray jsonArray = new JSONArray();
 	
 	//커넥션풀 가져오는 메소드
 	private Connection getConnection() throws Exception {
@@ -132,7 +135,6 @@ public class MngrDBBean {
 				bean.setMenu_code(rs.getString("menu_code"));
 				bean.setMenu_name(rs.getString("menu_name"));
 				bean.setMenu_price(rs.getInt("menu_price"));
-				bean.setMenu_desc(rs.getString("menu_desc"));
 				bean.setMenu_image(rs.getString("menu_image"));
 				menu.add(bean);
 			}
@@ -160,5 +162,9 @@ public class MngrDBBean {
 			if(pstmt!=null) try {pstmt.close();} catch(SQLException ex) {}
 			if(conn!=null) try {conn.close();} catch(SQLException ex) {}
 		}
+	}
+	
+	public void insertMenu() {
+		
 	}
 }
