@@ -145,6 +145,70 @@ public class MngrDBBean {
 		}
 		return menu;
 	}
+	
+	public ArrayList<CustomerListBean> getCustomerList() {
+		Connection conn=null;
+		PreparedStatement pstmt=null;
+		ResultSet rs=null;
+		ArrayList <CustomerListBean> customer =null;
+		CustomerListBean cbean;
+		customer=new ArrayList<>();
+		try {
+			conn=getConnection();
+			pstmt=conn.prepareStatement("select * from customer");
+			rs=pstmt.executeQuery();
+			while(rs.next()) {
+				cbean=new CustomerListBean();
+				cbean.setCus_num(rs.getString("cus_num"));
+				cbean.setCus_name(rs.getString("cus_name"));
+				cbean.setCus_regdate(rs.getTimestamp("cus_regdate"));
+				cbean.setCus_mile(rs.getInt("cus_mile"));
+				customer.add(cbean);
+			}
+		} catch(Exception ex) {
+			ex.printStackTrace();
+		}finally {
+			if(rs!=null) try {rs.close();} catch(SQLException ex) {}
+			if(pstmt!=null) try {pstmt.close();} catch(SQLException ex) {}
+			if(conn!=null) try {conn.close();} catch(SQLException ex) {}
+		}
+		return customer;
+	}
+	
+	public ArrayList<StaffListBean> getstaffList() {
+		Connection conn=null;
+		PreparedStatement pstmt=null;
+		ResultSet rs=null;
+		ArrayList <StaffListBean> staff =null;
+		StaffListBean sbean;
+		staff=new ArrayList<>();
+		try {
+			conn=getConnection();
+			pstmt=conn.prepareStatement("select * from admin");
+			rs=pstmt.executeQuery();
+			while(rs.next()) {
+				sbean=new StaffListBean();
+				sbean.setAdmin_id(rs.getString("admin_id"));
+				sbean.setAdmin_pass(rs.getString("admin_pass"));
+				sbean.setAdmin_regdate(rs.getTimestamp("admin_regdate"));
+				sbean.setAdmin_class(rs.getInt("admin_class"));
+				sbean.setAdmin_addr(rs.getString("admin_addr"));
+				sbean.setAdmin_num(rs.getString("admin_num"));
+				sbean.setAdmin_profile(rs.getString("admin_profile"));
+				staff.add(sbean);
+			}
+		} catch(Exception ex) {
+			ex.printStackTrace();
+		}finally {
+			if(rs!=null) try {rs.close();} catch(SQLException ex) {}
+			if(pstmt!=null) try {pstmt.close();} catch(SQLException ex) {}
+			if(conn!=null) try {conn.close();} catch(SQLException ex) {}
+		}
+		return staff;
+	}
+	
+	
+	
 	public void updateMenuimg(String filename, String menu_name) {
 		Connection conn=null;
 		PreparedStatement pstmt=null;
