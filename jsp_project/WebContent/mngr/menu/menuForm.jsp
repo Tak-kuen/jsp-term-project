@@ -17,8 +17,6 @@
 			<div class="items"><img src="/jsp_project/images${menu.menu_image}"/></div>
 			<div class="items">${menu.menu_name}</div>
 			<div class="items">${menu.menu_price}</div>
-			<div class="items">${menu.menu_desc}</div>
-			
 		</div>
 		</c:if>
 		<c:if test="${menu.menu_ctgr == 2}">
@@ -26,8 +24,6 @@
 			<div class="items"><img src="/jsp_project/images${menu.menu_image}"/></div>
 			<div class="items">${menu.menu_name}</div>
 			<div class="items">${menu.menu_price}</div>
-			<div class="items">${menu.menu_desc}</div>
-			
 		</div>
 		</c:if>
 		<c:if test="${menu.menu_ctgr == 3}">
@@ -35,13 +31,13 @@
 			<div class="items"><img src="/jsp_project/images${menu.menu_image}"/></div>
 			<div class="items">${menu.menu_name}</div>
 			<div class="items">${menu.menu_price}</div>
-			<div class="items">${menu.menu_desc}</div>
-			
 		</div>
 		</c:if>
 	</c:forEach>	
 </div>
 <div id="menuUpdate">
+	<form id="upForm1" action="/jsp_project/mg/cafe/imageUpload.do" method="post"
+			enctype="multipart/form-data">
 	<div id="menuEdit">
 		<div id="menuName">
 			<span class="menuLeft">메뉴명</span>
@@ -58,13 +54,11 @@
 		</div>
 	</div>
 	
-	<form id="upForm1" action="/jsp_project/mg/cafe/imageUpload.do" method="post"
-			enctype="multipart/form-data">
+	
 	<div id="form">
 		<div class="imgUpdate">
-			파일선택<input type="file" id="file1" name="file1">
-		</div>
-		<div class="imgUpdate">
+			<input type="file" id="file1" name="file1">
+			<button id="insert">등록</button>
 			<input type="submit" id="upPro1" value="수정"/>
 			<button id="cancel">취소</button>
 		</div>

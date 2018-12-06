@@ -34,7 +34,6 @@
 								</div>
 								<div class="items">${menu.menu_name}</div>
 								<div class="items">${menu.menu_price}</div>
-								<div class="items">${menu.menu_desc}</div>
 							</div>
 						</c:if>
 						<c:if test="${menu.menu_ctgr == 2}">
@@ -44,7 +43,6 @@
 								</div>
 								<div class="items">${menu.menu_name}</div>
 								<div class="items">${menu.menu_price}</div>
-								<div class="items">${menu.menu_desc}</div>
 							</div>
 						</c:if>
 						<c:if test="${menu.menu_ctgr == 3}">
@@ -54,7 +52,6 @@
 								</div>
 								<div class="items">${menu.menu_name}</div>
 								<div class="items">${menu.menu_price}</div>
-								<div class="items">${menu.menu_desc}</div>
 							</div>
 						</c:if>
 					</c:forEach>
@@ -68,7 +65,11 @@
 						적립금<span id="mileageMoney"></span>
 					</div>
 					<div class="payresult">
-						결제금액
+						<div id="payMoney">
+						결제금액<br/>
+						</div>
+						
+						<button id="payBtn">결제하기</button>
 					</div>
 						
 				</div>

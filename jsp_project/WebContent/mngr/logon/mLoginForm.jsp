@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="../css/mLoginForm.css" type="text/css" />
+<link rel="stylesheet" href="/jsp_project/css/mLoginForm.css" type="text/css" />
 <script src="/jsp_project/js/jquery-3.3.1.min.js"></script>
 <script src="/jsp_project/mngr/logon/mLogin.js"></script>
 <meta charset="UTF-8">
