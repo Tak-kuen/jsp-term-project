@@ -10,10 +10,10 @@ $(document).ready(function() {
 		location.href="/jsp_project/mg/mile/mileMain.do";
 	});
 	$("#customer").click(function() {
-		location.href="/jsp_project/mg/managerMain.do";
+		location.href="/jsp_project/mg/customer/customerForm.do";
 	});
 	$("#admin").click(function() {
-		location.href="/jsp_project/mg/managerMain.do";
+		location.href="/jsp_project/mg/staff/staffForm.do";
 	});
 	$("#sales").click(function() {
 		location.href="/jsp_project/mg/managerMain.do";

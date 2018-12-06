@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="../css/mLoginForm.css" type="text/css" />
+<link rel="stylesheet" href="../css/uLoginForm.css" type="text/css" />
 <script src="/jsp_project/js/jquery-3.3.1.min.js"></script>
 <script src="/jsp_project/user/logon/uLogin.js"></script>
 <meta charset="UTF-8">
@@ -13,8 +13,8 @@
 	<c:if test="${empty sessionScope.num}">
 		<div class="status">
 			<h1>Log-in</h1>
-			<span class="label">name&nbsp;</span><input id="name" name="name" type="text" size="20" maxlength="50"><br/>
-			<span class="label">phone-number</span><input id="num" name="num" type="password" size="20" maxlength="16">
+			<span class="label">이름&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><input id="name" name="name" type="text" size="20" maxlength="50"><br/>
+			<span class="label">전화번호</span><input id="num" name="num" type="password" size="20" maxlength="16">
 			<button id="login">로그인</button>
 		</div>
 		

@@ -20,6 +20,8 @@ public class ManagerLoginProAction implements CommandAction{
 		
 		HttpSession session = request.getSession();
 		session.setAttribute("menus", dbPro.getMenuList());
+		session.setAttribute("customlists", dbPro.getCustomerList());
+		session.setAttribute("stafflists", dbPro.getstaffList());
 		request.setAttribute("check", new Integer(check));
 		request.setAttribute("id", id);
 		return "/mngr/logon/mLoginPro.jsp";
